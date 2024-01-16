@@ -1,0 +1,175 @@
+#  ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ ██████╗  ██████╗
+#  ██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗██╔══██╗██╔════╝
+#  ███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║██████╔╝██║     
+#  ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║██╔══██╗██║     
+#  ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝██║  ██║╚██████╗
+#  ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
+
+#---wm independent hotkeys---#
+
+# program launcher
+#super + a
+#	dmenu_run -c -l 20
+
+# Apps
+super + {e,f,t,k,period}
+  {thunar,firefox,alacritty,spotify,emote}
+
+# terminal apps
+super + {n,r}
+  alacritty -e {nvim,ranger}
+
+super + @space
+  ~/.config/rofi/launchers/type-7/launcher.sh
+
+super + x
+  ~/.config/rofi/powermenu/type-2/powermenu.sh
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Scratchpad
+super + alt + o
+	tdrop -a -w 70% -h 35% -y 0 -x 15%  --class scratch alacritty --class=scratch
+
+# Power off, Reboot, Log out, Lockscreen, kill an app
+ctrl + super + alt + {p,r,q,l,k}
+	{systemctl poweroff, systemctl reboot,bspc quit,betterlockscreen -l dimblur,xkill}
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt +r
+	bspc {wm -r}
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# audio control
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +1%
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -1%
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# brightness control
+XF86MonBrightnessUp
+	brightnessctl set +10%
+XF86MonBrightnessDown
+	brightnessctl set 10%-
+
+# screenshot
+@Print
+	scrot --line mode=edge ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
+
+shift + @Print
+  scrot -s --line mode=edge ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
+
+#
+# state/flags
+#
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+super + Return
+	bspc node -t \~fullscreen
+
+# Toggle between floating and tiling
+super + w
+	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Toggle between pseudo-tiling and tiling
+super + s
+	bspc node focused.tiled -t pseudo_tiled || bspc node -t tiled
+
+# set the window state
+#super + {t,shift + p,s,f}
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+ctrl + alt {m,x,s,p}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# rotate desktop
+alt + shift + {d,a}
+	bspc node @/ --rotate {90,-90}
+
+super + shift + {d,a}
+  bspc node @/ -C {forward,backward}
+
+# Circulate the leaves of the tree
+super + c
+	bspc node @/ --circulate {backward,forward}
+
+# Change focus of the Node or Swap Nodes
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Switch workspace
+super + ctrl + {Left,Right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+	
+# Send focused Node to workspace directionally
+super + ctrl + shift + {Left,Right}
+	bspc node -d {prev,next} '--follow'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand/contract a window, only expands for floating
+alt + ctrl + shift +{Left,Down,Up,Right}
+  bspc node -z {left -20 0 || bspc node -z right -20 0, \
+                bottom 0 20 || bspc node -z top 0 20,\
+                top 0 -20 || bspc node -z bottom 0 -20,\
+                right 20 0 || bspc node -z left 20 0}
+
+# expand a window
+#super + alt + {Left,Down,Up,Right}
+#	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+
+# contract a window for both floating and tiled
+alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+
+# move a floating window
+ctrl + alt +{Left,Down,Up,Right}
+	bspc node -v {-10 0,0 10,0 -10,10 0}
