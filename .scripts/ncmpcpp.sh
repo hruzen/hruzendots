@@ -1,3 +1,0 @@
-pkill mpd
-mpd
-ncmpcpp

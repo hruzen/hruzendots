@@ -1,4 +1,0 @@
-set recolor true
-set default-bg rgba(0,0,0,0.47)
-set recolor-lightcolor rgba(0,0,0,0)
-set statusbar-bg "#00000022"
