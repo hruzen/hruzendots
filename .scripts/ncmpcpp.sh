@@ -1,0 +1,3 @@
+pkill mpd
+mpd
+ncmpcpp
