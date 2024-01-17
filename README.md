@@ -14,9 +14,9 @@ ___
 - **Using the _Install Script_ is ==NOT ESSENTIAL==**. My install script employs symbolic linking to organize files into their respective locations. However, if you prefer not to use install.sh, you can simply copy and paste all the files, provided you already have the necessary dependencies.
 ___
 ## Screen Shots
-![[Pictures/Screenshots/2024-01-14_234352-.png]]
-![[Pictures/Screenshots/2024-01-14_234357-.png]]
-![[Pictures/Screenshots/2024-01-14_234537-.png]]
+![2024-01-14_234352-](https://github.com/hruzen/hruzendots/assets/89473831/a8926cb0-d189-4066-899b-ba6d298323b7)
+![2024-01-14_234357-](https://github.com/hruzen/hruzendots/assets/89473831/ef6237a2-fd1e-4b4a-96c6-3f2f5d48066e)
+![2024-01-14_234537-](https://github.com/hruzen/hruzendots/assets/89473831/21b2644c-64d8-46a8-89e9-1fc52fc7dc64)
 ___
 ## Install Script
 ```
