@@ -154,8 +154,9 @@ alias pulldots='cd ~/Documents/.gitrepos/hruzendots/ && git pull'
 alias gitdots='cd ~/Documents/.gitrepos/hruzendots/ && git add . && git commit -m "update" && git remote add origin git@github.com:hruzen/hruzendots.git'
 
 #---Push shortcut---#
-alias gitpush='git push -u origin main'
-
+alias gp='git push -u origin main'
+alias gcm='git commit -m "update"'
+alias ga='git add .'
 #---Script-files---#
 
 alias cac='clearallcache.sh'
