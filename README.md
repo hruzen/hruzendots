@@ -2,6 +2,11 @@
 
 Here's all my config files (I'm good at explaining)
 
+Credits:-
+- The Polybar theme was taken from [Murzchnvok](https://github.com/Murzchnvok)
+- The Rofi theme was taken from [https://github.com/adi1090x](https://github.com/adi1090x)
+
+
 ## Installation ( Important )
 - The install script was created for personal use only.
 
