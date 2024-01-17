@@ -1,3 +1,10 @@
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_RUNTIME_DIR=/run/user/1000 
+export XDG_RUNTIME_DIR="/run/user/1000"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,18 +12,36 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Save the location of the current completion dump file.
+if [ -z "$ZSH_COMPDUMP" ]; then
+  ZSH_COMPDUMP="${ZDOTDIR:-${ZSH}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
+export CARGO_HOME="$XDG_DATA_HOME"/cargo 
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg 
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority 
+export ZSH="$XDG_DATA_HOME"/oh-my-zsh
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+#export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
+POWERLEVEL9K_CONFIG_FILE=~/.config/zsh/p10k.zsh
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -185,9 +210,12 @@ alias wmrc='nvim ~/.config/bspwm/bspwmrc'
 alias keys='nvim ~/.config/sxhkd/sxhkdrc'
 alias zshrc='nvim .zshrc'
 
-export PATH=$PATH:/home/hruzen/.scripts
+export PATH=$PATH:/home/hruzen/Documents/.scripts
 #neofetch
 pfetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/p10k.zsh.
+[[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
