@@ -16,8 +16,8 @@ super + {e,f,t,k,period}
   {thunar,firefox,alacritty,spotify,emote}
 
 # terminal apps
-super + {n,r}
-  alacritty -e {nvim,ranger}
+super + {n,r,shift + k}
+  alacritty -e {nvim,ranger,ncmpcpp}
 
 super + @space
   ~/.config/rofi/launchers/type-1/launcher.sh
