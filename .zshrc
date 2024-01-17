@@ -195,7 +195,7 @@ alias lbattery='limitd.sh'
 alias glaunch='gamelauncher.sh'
 alias pipes='mypipes.sh'
 alias logwall='logwall.sh'
-alias mp='pkill mpd && mpd && ncmpcpp'
+alias mpd='ncmpcpp.sh'
 alias dlaudio='dlaudio.sh'
 
 #---location---#

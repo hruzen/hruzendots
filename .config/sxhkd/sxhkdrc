@@ -19,6 +19,9 @@ super + {e,f,t,k,period}
 super + {n,r,shift + k}
   alacritty -e {nvim,ranger,ncmpcpp}
 
+alt + shift + k
+  mpd
+
 super + @space
   ~/.config/rofi/launchers/type-1/launcher.sh
 
