@@ -141,7 +141,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias yt='ytfzf'
 alias ytp='youtube-viewer --player=mpvt'
-alias editconf='nvim ~/Documents/.gitrepos/hruzendots/'
+alias editconf='cd ~/Documents/.gitrepos/hruzendots/ && nvim'
 
 #---Git commands---#
 
