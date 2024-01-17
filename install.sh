@@ -33,9 +33,9 @@ ln -s $HOME/Documents/.gitrepos/hruzendots/.config/sxhkd ~/.config
 ln -s $HOME/Documents/.gitrepos/hruzendots/.config/youtube-viewer ~/.config
 ln -s $HOME/Documents/.gitrepos/hruzendots/.config/zathura ~/.config
 
-cp -r $HOME/Documents/.gitrepos/hruzendots/.config/nvim ~/Documents
+#cp -r $HOME/Documents/.gitrepos/hruzendots/.config/nvim ~/Documents
 
-ln -s $HOME/Documents/.gitrepos/hruzendots/.local ~/
+ln -s $HOME/Documents/.gitrepos/hruzendots/.local/share/fonts ~/.local/share/
 ln -s $HOME/Documents/.gitrepos/hruzendots/.scripts ~/
 
 cp -r $HOME/Documents/.gitrepos/hruzendots/etc ~/Documents
