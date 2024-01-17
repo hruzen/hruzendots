@@ -39,6 +39,8 @@ multiplier = 3
 [font]
 size = 7.4
 
+[shell]
+program = "/usr/bin/zsh"
 
 #[bell]
 #animation = "Linear"
