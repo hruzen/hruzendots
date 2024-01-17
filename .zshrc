@@ -116,6 +116,7 @@ source $ZSH/oh-my-zsh.sh
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias vm-on="sudo systemctl start libvirtd.service"
 alias vm-off="sudo systemctl stop libvirtd.service"
+alias screenrate="screenrate.sh"
 
 #---Helpful aliases---#
 
