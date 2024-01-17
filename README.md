@@ -4,18 +4,21 @@ Here's all my config files (I'm good at explaining)
 
 Credits:-
 - The Polybar theme was taken from [Murzchnvok](https://github.com/Murzchnvok)
-- The Rofi theme was taken from [https://github.com/adi1090x](https://github.com/adi1090x)
-
-
+- The Rofi theme was taken from [Adi1090x](https://github.com/adi1090x)
+___
 ## Installation ( Important )
 - The install script was created for personal use only.
 
-- If you wish to use the install script, please review the dependencies list to determine what you need or want to install.
+- If you wish to use the [[#Install Script]] , please review the dependencies list to determine what you need or want to install. 
 
-- **Using the _Install Script_ is NOT ESSENTIAL**, my install script uses symbolic linking to organize the files to their respective places, if you don't want the install.sh you can simply copy and paste all the files if you already have the dependencies.
-
-- **Using the _Install Script_ is NOT ESSENTIAL**. My install script employs symbolic linking to organize files into their respective locations. However, if you prefer not to use install.sh, you can simply copy and paste all the files, provided you already have the necessary dependencies.
-
+- **Using the _Install Script_ is ==NOT ESSENTIAL==**. My install script employs symbolic linking to organize files into their respective locations. However, if you prefer not to use install.sh, you can simply copy and paste all the files, provided you already have the necessary dependencies.
+___
+## Screen Shots
+![[Pictures/Screenshots/2024-01-14_234352-.png]]
+![[Pictures/Screenshots/2024-01-14_234357-.png]]
+![[Pictures/Screenshots/2024-01-14_234537-.png]]
+___
+## Install Script
 ```
 #!/bin/bash
 
