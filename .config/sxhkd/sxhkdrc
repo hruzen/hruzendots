@@ -23,7 +23,7 @@ super + {n,r}
 alt + shift + k
   mpd
 
-alt + @space
+{alt,super} + @space
   ~/.config/rofi/launchers/type-4/launcher.sh
 
 super + x
