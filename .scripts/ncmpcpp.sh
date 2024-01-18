@@ -1,2 +1,0 @@
-pkill mpd
-mpd

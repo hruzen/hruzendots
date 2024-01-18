@@ -16,14 +16,15 @@ super + {e,f,t,k,period}
   {thunar,firefox,alacritty,spotify,emote}
 
 # terminal apps
-super + {n,r,shift + k}
-  alacritty -e {nvim,ranger,ncmpcpp}
+
+super + {n,r}
+  alacritty -e {nvim,ranger}
 
 alt + shift + k
   mpd
 
 super + @space
-  ~/.config/rofi/launchers/type-3/launcher.sh
+  ~/.config/rofi/launchers/type-4/launcher.sh
 
 super + x
   ~/.config/rofi/powermenu/type-1/powermenu.sh
@@ -34,6 +35,10 @@ super + Escape
 # Scratchpad
 super + alt + o
 	tdrop -a -w 70% -h 35% -y 0 -x 15%  --class scratch alacritty --class=scratch
+
+super + shift + k 
+  tdrop -a -w 40% -h 45% -y 25% -x 30%  --class scratch alacritty --class=scratch -e ncmpcpp
+
 
 # Power off, Reboot, Log out, Lockscreen, kill an app
 ctrl + super + alt + {p,r,q,l,k}
