@@ -76,10 +76,10 @@ XF86MonBrightnessDown
 
 # screenshot
 @Print
-	scrot --line mode=edge ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
+	scrot --line mode=edge ~/Documents/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
 
 shift + @Print
-  scrot -s --line mode=edge ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
+  scrot -s --line mode=edge ~/Documents/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
 
 #
 # state/flags

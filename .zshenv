@@ -5,7 +5,6 @@ export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_RUNTIME_DIR=/run/user/1000 
 export XDG_RUNTIME_DIR="/run/user/1000"
 
-
 export ZDOTDIR="$HOME"/.config/zsh
 
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
