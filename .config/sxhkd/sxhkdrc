@@ -23,7 +23,7 @@ alt + shift + k
   mpd
 
 super + @space
-  ~/.config/rofi/launchers/type-1/launcher.sh
+  ~/.config/rofi/launchers/type-3/launcher.sh
 
 super + x
   ~/.config/rofi/powermenu/type-1/powermenu.sh
