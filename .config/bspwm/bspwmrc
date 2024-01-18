@@ -39,12 +39,12 @@ bspc config pointer_action2       resize_side
 bspc config pointer_action3       resize_corner
 
 bspc rule -a tdrop sticky=on state='floating' focus=on
-bspc rule -a discord desktop='^8'
+bspc rule -a discord state='pseudo_tiled' desktop='^9'
 #bspc rule -a firefox desktop='^2'
-bspc rule -a feh state='floating' rectangle='966x576+0+0' center='true' 
+bspc rule -a feh state='floating' rectangle='966x543+0+0' center='true'
+bspc rule -a Spotify state='pseudo_tiled' desktop='^10' center='true' follow='true'
 bspc rule -a mpv state='floating'
-
-bspc rule -a Pavucontrol state='floating'
+bspc rule -a Pavucontrol state='floating' center='true'
 bspc rule -a Nitrogen state='floating' center='true'
 bspc rule -a Screenkey manage=off
 
