@@ -57,3 +57,4 @@ $HOME/.config/polybar/launch.sh &
 picom --config ~/.config/picom/picom.conf -fb &
 nitrogen --restore &
 dunst &
+mpd &

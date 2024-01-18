@@ -20,7 +20,7 @@ fi
 zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$Path
 
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg 
