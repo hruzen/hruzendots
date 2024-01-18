@@ -48,6 +48,10 @@ bspc rule -a Pavucontrol state='floating' center='true'
 bspc rule -a Nitrogen state='floating' center='true'
 bspc rule -a Screenkey manage=off
 
+
+setxkbmap us &
+lxsession &
+xsetroot -cursor_name left_ptr &
 sxhkd &
 $HOME/.config/polybar/launch.sh &
 picom --config ~/.config/picom/picom.conf -fb &
