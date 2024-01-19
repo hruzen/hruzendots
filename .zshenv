@@ -7,10 +7,10 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 #export XDG_RUNTIME_DIR=$PATH:~/.cache/xdgr
-export XDG_RUNTIME_DIR=/run/user/1000
+#export XDG_RUNTIME_DIR=/run/user/1000
 
 export ZDOTDIR="$HOME"/.config/zsh
-export PATH=$PATH:/home/hruzen/Documents/.scripts
+export PATH=$PATH:/home/hruzen/Documents/.gitrepos/hruzendots/.scripts
 
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 export CARGO_HOME="$XDG_DATA_HOME"/cargo

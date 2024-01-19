@@ -153,8 +153,10 @@ alias keys='nvim ~/.config/sxhkd/sxhkdrc'
 alias zshrc='nvim ~/Documents/.gitrepos/hruzendots/.zshrc'
 alias zshenv='nvim ~/Documents/.gitrepos/hruzendots/.zshenv'
 
-#neofetch
-#pfetch
+#---Python---#
+
+alias activepy='source venv/bin/activate'
+alias leavepy='deactivate'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
