@@ -106,10 +106,12 @@ alias link='ln -s'
 alias vc='code --disable-gpu' # gui code editor
 alias matrix='unimatrix -s 96'
 alias vim='nvim'
+alias svim='sudoedit'
 alias vi='nvim'
 alias yt='ytfzf'
 alias ytp='youtube-viewer -n --no-video-info --player=mpvt'
 alias editconf='cd ~/Documents/.gitrepos/hruzendots/ && nvim'
+alias sf='fzf'
 
 #---Git commands---#
 

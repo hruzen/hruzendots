@@ -2,6 +2,11 @@ if [ -z "$ZSH_COMPDUMP" ]; then
   ZSH_COMPDUMP="${ZDOTDIR:-${ZSH}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 fi
 
+export VISUAL="${EDITOR}"
+export EDITOR='nvim'
+export TERMINAL='alacritty'
+export BROWSER='firefox'
+
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
@@ -13,6 +18,8 @@ export ZDOTDIR="$HOME"/.config/zsh
 export PATH=$PATH:/home/hruzen/Documents/.gitrepos/hruzendots/.scripts
 
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
+export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode
+export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg 
 export ZSH="$XDG_DATA_HOME"/oh-my-zsh

@@ -18,7 +18,7 @@ super + {e,f,t,k,period}
 # terminal apps
 
 super + {n,r}
-  alacritty -e {nvim,ranger}
+  alacritty -e {nvim,lf}
 
 alt + shift + k
   mpd
@@ -131,8 +131,12 @@ super + {_,shift + }{Left,Down,Up,Right}
 super + ctrl + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
+# Switch Active Workspaces
+super + {Tab, shift + Tab}
+	bspc {desktop next.occupied -f, desktop prev.occupied -f}
+
 # focus the last node/desktop
-super + {grave,Tab}
+alt + {Tab,grave}
 	bspc {node,desktop} -f last
 
 # focus or send to the given desktop
@@ -143,6 +147,9 @@ super + {_,shift + }{1-9,0}
 super + ctrl + shift + {Left,Right}
 	bspc node -d {prev,next} '--follow'
 
+# Hide/Unhide Window
+super + d
+  winhide
 #
 # preselect
 #
