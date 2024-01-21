@@ -30,3 +30,5 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 #export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+
+

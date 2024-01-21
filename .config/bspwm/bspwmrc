@@ -56,7 +56,8 @@ xsetroot -cursor_name left_ptr &
 sxhkd &
 $HOME/.config/polybar/launch.sh &
 picom --config ~/.config/picom/picom.conf -fb &
-nitrogen --restore &
+#nitrogen --restore &
+nitrogen --set-zoom-fill ~/.config/wallpaper.png
 dunst &
 mpd &
-pidof redshift || redshift &
+pidof redshift || redshift -c ~/.config/redshift/redshift.conf &

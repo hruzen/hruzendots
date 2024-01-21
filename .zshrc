@@ -101,6 +101,9 @@ alias dlist='pacman -Qd'
 alias words='wc -l'
 alias link='ln -s'
 
+alias pacbak='sudo pacman -Qqen > packages.txt'
+alias aurbak='sudo pacman -Qqem > aurpackages.txt'
+
 #---App commands---#
 
 alias vc='code --disable-gpu' # gui code editor
@@ -112,6 +115,10 @@ alias yt='ytfzf'
 alias ytp='youtube-viewer -n --no-video-info --player=mpvt'
 alias editconf='cd ~/Documents/.gitrepos/hruzendots/ && nvim'
 alias sf='fzf'
+
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+
+alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
 #---Git commands---#
 
@@ -165,3 +172,5 @@ alias leavepy='deactivate'
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
+
+source /home/hruzen/.config/broot/launcher/bash/br
