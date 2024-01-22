@@ -12,12 +12,12 @@
 #	dmenu_run -c -l 20
 
 # Apps
-super + {e,f,t,k,period}
+super + {r,f,t,k,period}
   {thunar,firefox,alacritty,spotify,emote}
 
 # terminal apps
 
-super + {n,r}
+super + {n,e}
   alacritty -e {nvim,lf}
 
 alt + shift + k

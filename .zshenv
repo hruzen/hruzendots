@@ -31,4 +31,5 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 #export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
-
+#export PF_INFO="ascii title os kernel wm shell editor memory palette"
+export PF_INFO="title os kernel wm shell editor memory palette"

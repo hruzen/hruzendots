@@ -51,6 +51,7 @@ bspc rule -a Screenkey manage=off
 
 
 setxkbmap us &
+xrandr --output eDP-1 --mode 1920x1080 --rate 60
 #lxsession &
 xsetroot -cursor_name left_ptr &
 sxhkd &
@@ -59,5 +60,6 @@ picom --config ~/.config/picom/picom.conf -fb &
 #nitrogen --restore &
 nitrogen --set-zoom-fill ~/.config/wallpaper.png
 dunst &
+libinput-gestures-setup start &
 mpd &
 pidof redshift || redshift -c ~/.config/redshift/redshift.conf &

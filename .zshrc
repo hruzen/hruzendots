@@ -154,6 +154,7 @@ alias mygit='cd ~/Documents/.gitrepos/'
 alias home='cd ~/'
 alias doc='cd ~/Documents/'
 alias dl='cd ~/Downloads/'
+alias a1111='~/Documents/ai/webui.sh'
 
 #---quick-edit---#
 
@@ -174,3 +175,4 @@ alias leavepy='deactivate'
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 
 source /home/hruzen/.config/broot/launcher/bash/br
+export PATH=$PATH:/home/hruzen/.spicetify

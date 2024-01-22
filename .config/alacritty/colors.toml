@@ -1,6 +1,8 @@
 # Default colors
 [colors.primary]
+#background = "#dedede"
 #background = "#1a1b26"
+#foreground = "#000000"
 #foreground = "#a9b1d6"
 
 # Cursor colors
@@ -17,8 +19,8 @@ green = "#9ece6a"
 magenta = "#FF2079"
 red = "#f7768e"
 white = "#787c99"
+#white = "#000000"
 yellow = "#e0af68"
-
 # Bright colors
 [colors.bright]
 black = "#444b6a"
