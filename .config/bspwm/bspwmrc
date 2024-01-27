@@ -52,7 +52,7 @@ bspc rule -a Screenkey manage=off
 
 setxkbmap us &
 xrandr --output eDP-1 --mode 1920x1080 --rate 60
-#lxsession &
+lxsession &
 xsetroot -cursor_name left_ptr &
 sxhkd &
 $HOME/.config/polybar/launch.sh &
